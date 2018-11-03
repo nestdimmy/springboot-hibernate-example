@@ -1,4 +1,4 @@
-package com.devglan.model;
+package com.example.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,21 +8,21 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table
+@Table(name = "User_Details")
 public class UserDetails {
 
 	@Id
-	@Column
+	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
-	@Column
+	@Column(name = "first_Name")
 	private String firstName;
-	@Column
+	@Column(name = "last_Name")
 	private String lastName;
-	@Column
+	@Column(name = "email")
 	private String email;
-	@Column
+	@Column(name = "password")
 	private String password;
 
 	public int getId() {
